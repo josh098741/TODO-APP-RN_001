@@ -1,15 +1,14 @@
 import { createSettingsStyles } from "@/assets/styles/settings.styles"
+import Preferences from "@/components/Preferences"
 import ProgressStats from "@/components/ProgressStats"
 import useTheme from "@/hooks/useTheme"
 import { Ionicons } from "@expo/vector-icons"
 import { LinearGradient } from "expo-linear-gradient"
-import { useState } from "react"
 import { View, Text, ScrollView } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 
 const SettingsScreen = () => {
-    const [isAutoSync, setIsAutoSync] = useState(true)
-    const [isNotificationEnabled, setIsNotificationEnabled] = useState(true)
+    
 
     const {colors, isDarkMode, toggleDarkMode} = useTheme()
 
@@ -33,6 +32,9 @@ const SettingsScreen = () => {
                     showsVerticalScrollIndicator={false}
                 >
                     <ProgressStats />
+
+                     {/* PREFERENCES */}
+                     <Preferences />
                 </ScrollView>
             </SafeAreaView>
         </LinearGradient>
