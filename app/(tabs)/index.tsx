@@ -52,7 +52,7 @@ export default function Index() {
       setEditText(todo.text)
       setEditingId(todo._id)
    }
-   const handleSaveEdit = async (todo: Todo) => {
+   const handleSaveEdit = async () => {
       if(editingId){
          try{
             await updateTodo({id: editingId, text: editText.trim()})
@@ -66,7 +66,7 @@ export default function Index() {
          
    }
 
-   const handleCancelEdit = async (todo: Todo) => {
+   const handleCancelEdit = async () => {
       setEditingId(null)
       setEditText("")
    }
