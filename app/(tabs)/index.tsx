@@ -42,9 +42,6 @@ export default function Index() {
          {text: "Cancel", style: "cancel"},
          {text: "Delete", style: "destructive", onPress: () => deleteTodo({ id })},
       ])
-      try{
-
-      }catch(error){}
    }
 
    const renderTodoItem = ({item}: {item: Todo})  => {
